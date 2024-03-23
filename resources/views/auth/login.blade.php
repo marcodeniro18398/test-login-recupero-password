@@ -11,6 +11,6 @@
             <input type="password" name="password" class="form-control" id="exampleInputPassword1">
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
-        <p><a class="text-decoration-none" href="{{ 'register' }}"> NOn hai un account?</a></p>
+        <p><a class="text-decoration-none" href="{{ 'register' }}"> Non hai un account?</a></p>
     </form>
 </x-layout>

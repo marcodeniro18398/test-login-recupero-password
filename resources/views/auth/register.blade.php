@@ -20,6 +20,6 @@
             <input type="password" name="password_confirmation" class="form-control" id="password_confirmation">
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
-        <p><a class="text-decoration-none" href="{{ 'login' }}">hai già un account?</a></p>
+        <p><a class="text-decoration-none" href="{{ 'login' }}">Hai già un account?</a></p>
     </form>
 </x-layout>

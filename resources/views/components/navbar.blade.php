@@ -24,7 +24,7 @@
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="">Something else here</a></li>
+                            <li><a class="dropdown-item" href="{{route('profile')}}">Profilo!</a></li>
                         </ul>
                     @else
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"

@@ -6,4 +6,4 @@ use App\Http\Controllers\PublicController;
 
 Route::get('/', [PublicController::class, 'homepage'])->name('homepage')->middleware('verified');
 // rotte profilo con user controller 
-Route::get('/profile', [UserController::class, 'profile'])->name('profile')->middleware('auth');
+Route::get('/profile', [UserController::class, 'profile'])->name('profile')->middleware('auth', 'password.confirm');

@@ -5,17 +5,24 @@
                 <h2>Profilo di:{{ Auth::user()->name }}</h2>
             </div>
         </div>
+
         <div class="row justify-content-center">
+
             <div class="col-6">
                 <p>Profile:{{ Auth::user()->name }}</p>
                 <p>Email:{{ Auth::user()->email }}</p>
                 <p>Account verificato:<i
-                        class="{{ Auth::user()->email_verifed_at ? 'bi bi-check-circle-fill text-danger' : 'bi bi-check-circle-fill text-success' }}"></i>
+                        class="{{ Auth::user()->email_verified_at ? 'bi bi-check-circle-fill text-success' : 'bi bi-check-circle-fill text-danger' }}"></i>
                 </p>
             </div>
         </div>
         {{-- aggiornamento dati utente --}}
         <div class="row">
+            @if (session('status') === 'profile-information-updated')
+                <div class="alert alert-success">
+                    <p>Hai modificato il tuo profilo correttamente!</p>
+                </div>
+            @endif
             <div class="col-3">
                 <h2>Aggiorna il profilo!</h2>
             </div>
@@ -42,6 +49,11 @@
         {{-- aggiornamento password --}}
 
         <div class="row">
+            @if (session('status') === 'password-updated')
+                <div class="alert alert-success">
+                    <p>Hai modificato la tua password correttamente!</p>
+                </div>
+            @endif
             <div class="col-3">
                 <h2>Aggiorna la tua password!</h2>
             </div>

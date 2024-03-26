@@ -8,7 +8,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active" aria-current="page" href="/">Home</a>
                 </li>
                 @auth
                     <li class="nav-item dropdown">
@@ -24,21 +24,21 @@
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="{{route('profile')}}">Profilo!</a></li>
+                            <li><a class="dropdown-item" href="{{ route('profile') }}">Profilo!</a></li>
                         </ul>
                     @else
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Benvenuto guest!
+                        <a class="nav-link " href="{{ route('register') }}" 
+                            aria-expanded=""><i class="bi bi-person-fill"></i>
+                           
                         </a>
-                        <ul class="dropdown-menu">
+                        {{-- <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="{{ route('register') }}">Registrati!</a></li>
                             <li><a class="dropdown-item" href="{{ route('login') }}">Login!</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
                             <li><a class="dropdown-item" href="">Something else here</a></li>
-                        </ul>
+                        </ul> --}}
                     </li>
                 </ul>
             @endauth

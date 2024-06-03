@@ -21,7 +21,7 @@
             </form>
         </div>
 
-
+z
 
         <div class="form-container sign-up">
             <form class="" method="POST" action="{{ route('register') }}">
